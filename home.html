@@ -192,7 +192,7 @@ notificar();
 }
 
 function getMensages() {
-$.get("http://localhost:3000/mensajes", (data)=>{
+$.get("https://chat-friendsweb.onrender.com/mensajes", (data)=>{
 data.forEach(agregarMensajes)
 });
 
@@ -200,7 +200,7 @@ data.forEach(agregarMensajes)
 }
 
 function postMensaje(data) {
-$.post('http://localhost:3000/mensajes', data);
+$.post('https://chat-friendsweb.onrender.com/mensajes', data);
 }
 function agregarUsuarios(data){
 $("#usuarios").append(`<div id="lista1">
@@ -210,7 +210,7 @@ $("#usuarios").append(`<div id="lista1">
 </div>`)
 }
 function getUsuarios(){
-$.get("http://localhost:3000/usuarios", (data)=>{
+$.get("https://chat-friendsweb.onrender.com/usuarios", (data)=>{
 $("#usuarios").empty();
 data.forEach(agregarUsuarios)
 });
